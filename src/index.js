@@ -5,6 +5,8 @@
  */
 
 import * as Blockly from 'blockly';
+// Has side effects.
+import './blocks/vertical_extensions';
 import {blocks} from './blocks/text';
 import {blocks as mathBlocks} from './blocks/math';
 import {forBlock} from './generators/javascript';

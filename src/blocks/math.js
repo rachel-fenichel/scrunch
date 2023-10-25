@@ -1,10 +1,11 @@
 
 import * as Blockly from 'blockly/core';
+import { scrunchColors } from './colors';
 
 // Previously Blockly.OUTPUT_SHAPE_ROUND. TODO: Figure out what the new value is.
 let round = 2;
 
-let textFieldColor = '#FFFFFF';
+const textFieldColor = scrunchColors.textField;
 
 export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
     // Block for generic numeric value.
