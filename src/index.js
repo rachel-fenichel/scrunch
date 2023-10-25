@@ -22,7 +22,7 @@ Object.assign(javascriptGenerator.forBlock, forBlock);
 const blocklyDiv = document.getElementById('blocklyDiv');
 const ws = Blockly.inject(blocklyDiv,
   {
-    toolbox,
+    toolbox: document.getElementById('toolbox-categories'),
     renderer: 'zelos',
   }
   );
