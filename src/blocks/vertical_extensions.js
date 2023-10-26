@@ -10,6 +10,33 @@ let ROUND = 2;
 let HEXAGONAL = 1;
 
 /**
+ * Set the colour of the block from strings or string table references.
+ * @param {BlockSvg} block The block whose colours need to be set.
+ * @param {string|?} primary Primary colour, which may be a string that contains
+ *     string table references.
+ * @param {string|?} secondary Secondary colour, which may be a string that
+ *     contains string table references.
+ * @param {string|?} tertiary Tertiary colour, which may be a string that
+ *     contains string table references.
+ * @param {string|?} quaternary Quaternary colour, which may be a string that
+ *     contains string table references.
+ * @private
+ */
+function setColourFromRawValues(block, primary, secondary,
+    tertiary, quaternary) {
+//   primary = goog.isString(primary) ?
+//       Blockly.utils.replaceMessageReferences(primary) : primary;
+//   secondary = goog.isString(secondary) ?
+//       Blockly.utils.replaceMessageReferences(secondary) : secondary;
+//   tertiary = goog.isString(tertiary) ?
+//       Blockly.utils.replaceMessageReferences(tertiary) : tertiary;
+//   quaternary = goog.isString(quaternary) ?
+//       Blockly.utils.replaceMessageReferences(quaternary) : quaternary;
+
+  block.setColour(primary, secondary, tertiary, quaternary);
+};
+
+/**
  * Helper function that generates an extension based on a category name.
  * The generated function will set primary, secondary, tertiary, and quaternary
  * colours based on the category name.
@@ -29,7 +56,7 @@ const colourHelper = function(category) {
    * @this {Blockly.Block}
    */
   return function() {
-    this.setColourFromRawValues_(colours.primary, colours.secondary,
+    setColourFromRawValues(this, colours.primary, colours.secondary,
         colours.tertiary, colours.quaternary);
   };
 };
@@ -38,7 +65,7 @@ const colourHelper = function(category) {
  * Extension to set the colours of a text field, which are all the same.
  */
 const COLOUR_TEXTFIELD = function() {
-  this.setColourFromRawValues_(scrunchColors.textFieldColor,
+  setColourFromRawValues(this, scrunchColors.textFieldColor,
     scrunchColors.textFieldColor, scrunchColors.textFieldColor,
     scrunchColors.textFieldColor);
 };

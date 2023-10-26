@@ -1,0 +1,51 @@
+Updating from blocks defined with JavaScript to blocks defined with JSON: 
+
+1. Replace comments that look like this:
+```
+  /**
+   * Block to turn right.
+   * @this Blockly.Block
+   */
+```
+
+with their single-line equivalents:
+`// Block to turn right.`
+
+with the following regexes in vscode find and replace (or however you like using regexes)
+Find: `\/\*\*\n *\*( Block.*)\n.*\n *\*\/`
+Replace: `//$1`
+
+Note: Multiline doc comments will need to be replaced manually.
+
+
+2. Swap the comment and the `Blockly.Blocks['blockname'] = {` lines with the following regexes:
+Find: `(Blockly.Blocks\['.*'\] = \{\n)((?: *\/\/.*\n)+)`
+Replace: `$2$1`
+
+3. Remove `init: function () {this.jsonInit()}` wrapper with the following regexes:
+
+Find: `init: function\(\) \{\n *this\.jsonInit\(([^\)]*)\);\n *\}`
+Replace: `$1`
+
+Note that this leaves it in a bad state.
+
+4. Move block name into block definition with the following regexes:
+
+Find: `Blockly\.Blocks\[(.*)\] = \{\n *\{([^;]*\n)*\};`
+Replace: `{\n  'type': $1,$2,`
+
+5. At the top of the file, add 
+
+```
+import * as Blockly from 'blockly/core';
+
+export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
+```
+
+6. At the bottom of the file add
+```
+]);
+```
+
+7. Run a formatter or something.
+

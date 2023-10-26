@@ -39,6 +39,31 @@ export const toolbox = {
         'type': 'math_angle',
       },
     ],
+  },{
+    'kind': 'category',
+    'name': 'Scrunch Motion',
+    'contents': [
+      {
+        'kind': 'block',
+        'type': 'motion_movesteps',
+      },
+      {
+        'kind': 'block',
+        'type': 'motion_turnright',
+      },
+      {
+        'kind': 'block',
+        'type': 'motion_turnleft',
+      },
+      {
+        'kind': 'block',
+        'type': 'motion_pointindirection',
+      },
+      {
+        'kind': 'block',
+        'type': 'motion_pointtowards_menu',
+      },
+    ],
   },
     {
       'kind': 'category',

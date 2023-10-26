@@ -6,9 +6,12 @@
 
 import * as Blockly from 'blockly';
 // Has side effects.
+import './messages';
+// Has side effects.
 import './blocks/vertical_extensions';
 import {blocks} from './blocks/text';
 import {blocks as mathBlocks} from './blocks/math';
+import {blocks as motionBlocks} from './blocks/motion';
 import {forBlock} from './generators/javascript';
 import {javascriptGenerator} from 'blockly/javascript';
 import {save, load} from './serialization';
@@ -18,6 +21,7 @@ import './index.css';
 // Register the blocks and generator with Blockly
 Blockly.common.defineBlocks(blocks);
 Blockly.common.defineBlocks(mathBlocks);
+Blockly.common.defineBlocks(motionBlocks);
 Object.assign(javascriptGenerator.forBlock, forBlock);
 
 // Set up UI elements and inject Blockly
@@ -25,6 +29,7 @@ const blocklyDiv = document.getElementById('blocklyDiv');
 const ws = Blockly.inject(blocklyDiv,
   {
     toolbox: document.getElementById('toolbox-categories'),
+    //toolbox,
     renderer: 'zelos',
   }
   );
