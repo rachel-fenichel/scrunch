@@ -12,6 +12,7 @@ import './blocks/vertical_extensions';
 import {blocks} from './blocks/text';
 import {blocks as mathBlocks} from './blocks/math';
 import {blocks as motionBlocks} from './blocks/motion';
+import {blocks as looksBlocks} from './blocks/looks';
 import {forBlock} from './generators/javascript';
 import {javascriptGenerator} from 'blockly/javascript';
 import {save, load} from './serialization';
@@ -22,6 +23,7 @@ import './index.css';
 Blockly.common.defineBlocks(blocks);
 Blockly.common.defineBlocks(mathBlocks);
 Blockly.common.defineBlocks(motionBlocks);
+Blockly.common.defineBlocks(looksBlocks);
 Object.assign(javascriptGenerator.forBlock, forBlock);
 
 // Set up UI elements and inject Blockly

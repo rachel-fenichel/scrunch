@@ -17,7 +17,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
                 "name": "STEPS"
             }
         ],
-        "category": 'motion',
+        "category": motionCategory,
         "extensions": ["colours_motion", "shape_statement"]
     },
     // Block to turn right.
@@ -36,7 +36,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
                 "name": "DEGREES"
             }
         ],
-        "category": 'motion',
+        "category": motionCategory,
         "extensions": ["colours_motion", "shape_statement"]
     },
     // Block to turn left.
@@ -55,7 +55,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
                 "name": "DEGREES"
             }
         ],
-        "category": 'motion',
+        "category": motionCategory,
         "extensions": ["colours_motion", "shape_statement"]
     },
     // Block to point in direction.
@@ -68,7 +68,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
                 "name": "DIRECTION"
             }
         ],
-        "category": 'motion',
+        "category": motionCategory,
         "extensions": ["colours_motion", "shape_statement"]
     },
     // Point towards drop-down menu.
@@ -101,7 +101,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
                 "name": "TOWARDS"
             }
         ],
-        "category": 'motion',
+        "category": motionCategory,
         "extensions": ["colours_motion", "shape_statement"]
     },
     // Go to drop-down menu.
@@ -138,7 +138,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
                 "name": "Y"
             }
         ],
-        "category": 'motion',
+        "category": motionCategory,
         "extensions": ["colours_motion", "shape_statement"]
     },
     // Block to go to a menu item.
@@ -151,7 +151,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
                 "name": "TO"
             }
         ],
-        "category": 'motion',
+        "category": motionCategory,
         "extensions": ["colours_motion", "shape_statement"]
     },
 
@@ -173,7 +173,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
                 "name": "Y"
             }
         ],
-        "category": 'motion',
+        "category": motionCategory,
         "extensions": ["colours_motion", "shape_statement"]
     },
     // Glide to drop-down menu
@@ -210,7 +210,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
                 "name": "TO"
             }
         ],
-        "category": 'motion',
+        "category": motionCategory,
         "extensions": ["colours_motion", "shape_statement"]
     },
     // Block to change X.
@@ -223,7 +223,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
                 "name": "DX"
             }
         ],
-        "category": 'motion',
+        "category": motionCategory,
         "extensions": ["colours_motion", "shape_statement"]
     },
     // Block to set X.
@@ -236,7 +236,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
                 "name": "X"
             }
         ],
-        "category": 'motion',
+        "category": motionCategory,
         "extensions": ["colours_motion", "shape_statement"]
     },
     // Block to change Y.
@@ -249,7 +249,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
                 "name": "DY"
             }
         ],
-        "category": 'motion',
+        "category": motionCategory,
         "extensions": ["colours_motion", "shape_statement"]
     },
     // Block to set Y.
@@ -262,14 +262,14 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
                 "name": "Y"
             }
         ],
-        "category": 'motion',
+        "category": motionCategory,
         "extensions": ["colours_motion", "shape_statement"]
     },
     // Block to bounce on edge.
     {
         'type': 'motion_ifonedgebounce',
         "message0": Blockly.Msg.MOTION_IFONEDGEBOUNCE,
-        "category": 'motion',
+        "category": motionCategory,
         "extensions": ["colours_motion", "shape_statement"]
     },
     // Block to set rotation style.
@@ -287,14 +287,14 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
                 ]
             }
         ],
-        "category": 'motion',
+        "category": motionCategory,
         "extensions": ["colours_motion", "shape_statement"]
     },
     // Block to report X.
     {
         'type': 'motion_xposition',
         "message0": Blockly.Msg.MOTION_XPOSITION,
-        "category": 'motion',
+        "category": motionCategory,
         "checkboxInFlyout": true,
         "extensions": ["colours_motion", "output_number"]
     },
@@ -302,7 +302,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
     {
         'type': 'motion_yposition',
         "message0": Blockly.Msg.MOTION_YPOSITION,
-        "category": 'motion',
+        "category": motionCategory,
         "checkboxInFlyout": true,
         "extensions": ["colours_motion", "output_number"]
     },
@@ -310,7 +310,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
     {
         'type': 'motion_direction',
         "message0": Blockly.Msg.MOTION_DIRECTION,
-        "category": 'motion',
+        "category": motionCategory,
         "checkboxInFlyout": true,
         "extensions": ["colours_motion", "output_number"]
     },
@@ -326,7 +326,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
                 "name": "DISTANCE"
             }
         ],
-        "category": 'motion',
+        "category": motionCategory,
         "extensions": ["colours_motion", "shape_statement"]
     },
     // Block to scroll the stage up. Does not actually do anything. This is an
@@ -341,7 +341,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
                 "name": "DISTANCE"
             }
         ],
-        "category": 'motion',
+        "category": motionCategory,
         "extensions": ["colours_motion", "shape_statement"]
     },
     // Block to change the stage's scrolling alignment. Does not actually do
@@ -363,7 +363,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
                 ]
             }
         ],
-        "category": 'motion',
+        "category": motionCategory,
         "extensions": ["colours_motion", "shape_statement"]
     },
     // Block to report the stage's scroll position's X value. Does not actually
@@ -372,7 +372,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
     {
         'type': 'motion_xscroll',
         "message0": Blockly.Msg.MOTION_XSCROLL,
-        "category": 'motion',
+        "category": motionCategory,
         "extensions": ["colours_motion", "output_number"]
     },
     // Block to report the stage's scroll position's Y value. Does not actually
@@ -381,7 +381,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
     {
         'type': 'motion_yscroll',
         "message0": Blockly.Msg.MOTION_YSCROLL,
-        "category": 'motion',
+        "category": motionCategory,
         "extensions": ["colours_motion", "output_number"]
     },
 ]);
