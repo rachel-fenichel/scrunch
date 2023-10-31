@@ -9,10 +9,11 @@ import * as Blockly from 'blockly';
 import './messages';
 // Has side effects.
 import './blocks/vertical_extensions';
-import {blocks} from './blocks/text';
-import {blocks as mathBlocks} from './blocks/math';
-import {blocks as motionBlocks} from './blocks/motion';
-import {blocks as looksBlocks} from './blocks/looks';
+// import {blocks} from './blocks/text';
+// import {blocks as mathBlocks} from './blocks/math';
+// import {blocks as motionBlocks} from './blocks/motion';
+// import {blocks as looksBlocks} from './blocks/looks';
+import { defineScrunchBlocks } from './blocks/all_blocks';
 import {forBlock} from './generators/javascript';
 import {javascriptGenerator} from 'blockly/javascript';
 import {save, load} from './serialization';
@@ -20,10 +21,7 @@ import {toolbox} from './toolbox';
 import './index.css';
 
 // Register the blocks and generator with Blockly
-Blockly.common.defineBlocks(blocks);
-Blockly.common.defineBlocks(mathBlocks);
-Blockly.common.defineBlocks(motionBlocks);
-Blockly.common.defineBlocks(looksBlocks);
+defineScrunchBlocks();
 Object.assign(javascriptGenerator.forBlock, forBlock);
 
 // Set up UI elements and inject Blockly
