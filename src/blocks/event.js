@@ -87,6 +87,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
           "type": "field_variable",
           "name": "BROADCAST_OPTION",
           "variableTypes": [broadcastType],
+          "defaultType": broadcastType,
           "variable": Blockly.Msg.DEFAULT_BROADCAST_MESSAGE_NAME
         }
       ],
@@ -145,6 +146,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
           "type": "field_variable",
           "name": "BROADCAST_OPTION",
           "variableTypes":[broadcastType],
+          "defaultType": broadcastType,
           "variable": Blockly.Msg.DEFAULT_BROADCAST_MESSAGE_NAME
         }
       ],
