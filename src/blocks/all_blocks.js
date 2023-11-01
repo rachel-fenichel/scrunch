@@ -9,6 +9,7 @@ import {blocks as soundBlocks} from './sound';
 import {blocks as eventBlocks} from './event';
 import {blocks as controlBlocks} from './control';
 import {blocks as sensingBlocks} from './sensing';
+import {blocks as operatorBlocks} from './operators';
 
 export function defineScrunchBlocks() {
     Blockly.common.defineBlocks(blocks);
@@ -19,4 +20,5 @@ export function defineScrunchBlocks() {
     Blockly.common.defineBlocks(eventBlocks);
     Blockly.common.defineBlocks(controlBlocks);
     Blockly.common.defineBlocks(sensingBlocks);
+    Blockly.common.defineBlocks(operatorBlocks);
 };
