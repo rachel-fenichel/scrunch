@@ -17,6 +17,11 @@ import { defineScrunchBlocks } from './blocks/all_blocks';
 import {forBlock} from './generators/javascript';
 import {javascriptGenerator} from 'blockly/javascript';
 import {save, load} from './serialization';
+import {
+  ContinuousToolbox,
+  ContinuousFlyout,
+  ContinuousMetrics,
+} from '@blockly/continuous-toolbox';
 import {toolbox} from './toolbox';
 import './index.css';
 
@@ -31,6 +36,11 @@ const ws = Blockly.inject(blocklyDiv,
     toolbox: document.getElementById('toolbox-categories'),
     //toolbox,
     renderer: 'zelos',
+    plugins: {
+      'toolbox': ContinuousToolbox,
+      'flyoutsVerticalToolbox': ContinuousFlyout,
+      'metricsManager': ContinuousMetrics,
+    },
   }
   );
 
